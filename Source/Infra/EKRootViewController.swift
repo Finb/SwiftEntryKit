@@ -58,15 +58,7 @@ class EKRootViewController: UIViewController {
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        guard let lastAttributes = lastAttributes else {
-            return super.supportedInterfaceOrientations
-        }
-        switch lastAttributes.positionConstraints.rotation.supportedInterfaceOrientations {
-        case .standard:
-            return super.supportedInterfaceOrientations
-        case .all:
-            return .all
-        }
+        return .portrait
     }
     
     // Previous status bar style
